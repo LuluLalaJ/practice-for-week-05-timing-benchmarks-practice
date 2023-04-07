@@ -6,6 +6,19 @@ function addNums10Timing(increment) {
 
   // Your code here
 
+  let result = []
+  let counter = 0
+  let currentV = increment
+  while (counter < 10) {
+    startTime = Date.now()
+    result.push(addNums(currentV))
+    endTime = Date.now()
+    currentV += increment
+    counter++
+    console.log(`${endTime - startTime}`)
+  }
+  return result
+
 }
 
 
@@ -14,6 +27,19 @@ function addManyNums10Timing(increment) {
 // Then, add timing code
 
   // Your code here
+
+  let result = []
+  let counter = 0
+  let currentV = increment
+  while (counter < 10) {
+    startTime = Date.now()
+    result.push(addManyNums(currentV))
+    endTime = Date.now()
+    currentV += increment
+    counter++
+    console.log(`${endTime - startTime}`)
+  }
+  return result
 
 }
 
